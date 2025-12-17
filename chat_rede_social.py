@@ -76,6 +76,7 @@ def iniciar_streamlit():
 # Iniciar o bot em uma thread separada
 if "bot_iniciado" not in st.session_state:
     st.session_state.bot_iniciado = True
-    threading.Thread(target=iniciar_bot, daemon=True).start()
+    threading.Thread(target=iniciar_bot, 
+                     daemon=True).start()
 
 iniciar_streamlit()
